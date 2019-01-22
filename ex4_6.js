@@ -4,16 +4,17 @@ const pickNumber = parseInt(readlineSync.question("Pick a  number."));
 
 console.log(typeof pickNumber) // Contrôle
 
-let numberProg = 1;
-
-function factorial(i, a) {
-  if (i <= a) {
-    console.log(numberProg *= i);
-    factorial(i + 1);
+let factorial = (a) => {
+  if (a < 0) {
+    return -1;
+  } else if (a == 0) {
+    return 1;
+  } else {
+    return a*factorial(a-1);
   }
 }
-factorial(1, pickNumber); //Contrôle
-// console.log(factorial(pickNumber));
+//console.log(factorial(5)); //Contrôle
+console.log(factorial(pickNumber));
 
 /*
 énoncé :
