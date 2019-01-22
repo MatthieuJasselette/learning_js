@@ -34,16 +34,17 @@ let betterAverage = (arr) => {
 //console.log("Moyenne =" + betterAverage(multiRand()))
 
 
-/*
+
 let program = () => {
-  let programArr = [];*/
+  let programArr = [];
   programArr = multiRand(); //donne un array
-  console.log(programArr);// Contrôle
-  console.log(min(programArr));
+  console.log("Array : " + programArr);// Contrôle
+  return [min(programArr), max(programArr), betterAverage(programArr)];
+  /*console.log(min(programArr));
   console.log(max(programArr));
-  console.log(betterAverage(programArr));
-//}
-//console.log(program()); //Contrôle
+  console.log(betterAverage(programArr));*/
+}
+console.log(program()); //Contrôle
 
 
 /*énoncé :
