@@ -29,11 +29,9 @@ function multiRand() {
   let min = (arr) => Math.min.apply(null, arr) ;
   //console.log(min(controleArr)) //Contrôle
 
-
   //trouve le max d'un array
   let max= (arr) => Math.max.apply(null, arr);
   //console.log(max(controleArr)) //Contrôle
-
 
 let program = () => {
   let programArr = [];
