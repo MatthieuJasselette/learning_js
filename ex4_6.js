@@ -2,7 +2,7 @@ const readlineSync = require("readline-sync");
 
 const pickNumber = parseInt(readlineSync.question("Pick a  number."));
 
-console.log(typeof pickNumber) // Contrôle
+//console.log(typeof pickNumber) // Control
 
 let factorial = (a) => {
   if (a < 0) {
