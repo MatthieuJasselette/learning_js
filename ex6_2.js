@@ -28,7 +28,7 @@ function isCollide(a, b) {
 
 let carre1 = new Rectangle (10, 10, 10, 10);
 let carre2 = new Rectangle (2, 2, 2, 2);
-let rectangle1 = new Rectangle(10, 10, 10, 10);
+let rectangle1 = new Rectangle(11, 12, 10, 10);
 console.log("Contrôle 2 :", isCollide(carre2, rectangle1)); // retourne false, pas de collision
 console.log("Contrôle 3 :", carre1.collides(rectangle1)); // retourne true, collision
 

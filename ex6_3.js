@@ -22,8 +22,8 @@ class Rectangle {
       return true;
     }
   }
-  //essai pour bypass la méthode toString par défaut ; raté
-  rectToString (){
+  //essai pour bypass la méthode toString par défaut ; Fonctionne  ! ! !
+  toString (){
       var ret = `${this.name} : [${this.topLeftXPos} - ${this.topLeftYPos}] Longueur : ${this.length}, Largeur : ${this.width}`;
       return ret;
     }
@@ -49,13 +49,16 @@ let crazyRectangle = () => {
       if (i !== j){
         if(rectangleBox[i].collides(rectangleBox[j]) == true){//on utilise l'index des objets stockés dans rectangleBox
           collisionCount ++;
+          //log avec la mise en forme basique JSON pour un objet
         //console.log(`Collision détectée entre ${JSON.stringify(rectangleBox[i])} et ${JSON.stringify(rectangleBox[j])}`);
-        console.log(`Collision détectée entre ${rectangleBox[i].rectToString()} et ${rectangleBox[j].rectToString()}`);
+          //log avec une mise en forme personnalisée et adaptée au contenu
+        console.log(`Collision détectée entre ${rectangleBox[i].toString()} et ${rectangleBox[j].toString()}`);
+        //ne plus oublier () après la déclaration d'une méthode :(
         }
       }
     }
   }
-  console.log(collisionCount);
+  console.log(`${collisionCount} collisions détectées.`);
 }
 
 crazyRectangle()
@@ -71,14 +74,9 @@ Then it will display all colliding rectangles amongst those that were generated 
 
   Le code doit d'abord générer 1000 rectangles et ensuite les comparer chacun à tous les autres.
 
-Réassigner la méthode toString
+bypass la méthode toString
   Dog.prototype.toString = function dogToString() {
   var ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
   return ret;
 }
-
-Dog.prototype.toString = function dogToString() {
-var ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
-return ret;
-} NB trouver comment on déclare un eméthode au sein d'une classe.
 */
