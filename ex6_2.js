@@ -12,7 +12,6 @@ class Rectangle {
    this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.length &&
    this.length + this.topLeftYPos > otherRectangle.topLeftYPos){
       return true;
-    } else {
     }
   }
 }

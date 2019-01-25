@@ -37,10 +37,16 @@ let askTvSerie = () =>{
   let favActors = askFavCastNames(); //renvoie un array de noms d'acteurs
 // Crée un objet avec la fonction serieFactory e tles inputs enregistrés avant
   let favSerie = serieFactory(favName, favProdYear, favActors);
-//insérer le randomizeCast AVANT le stringify
+//insérer le randomizeCast AVANT le stringify fonctionne mais c'est un peu de la triche
   randomizeCast(favSerie.castNames);
   favSerie = JSON.stringify(favSerie); // maintenant favSerie est un string JSON
   return favSerie;
+  /* Tentative pour utiliser le JSON.parse mais il nesemble pas prendre favSerie en input.
+  console.log("contrôle 3.2" + favSerie)
+  const favserieRandomize = JSON.parse(favSerie)
+  randomizeCast(favserieRandomize.castNames)
+  return favserieRandomize;
+  */
 }
 console.log(askTvSerie());//Fonctionne, retourne le texte en format JSON
 

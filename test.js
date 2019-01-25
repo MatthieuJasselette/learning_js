@@ -18,7 +18,7 @@ let totalBadges = parseInt(htmlBadges) + parseInt(cssBadges);
 
 console.log('Woaw, you have ' + totalBadges + " badges !");*/
 
-let controleArr = [1, 2, 3, 4];
+/*let controleArr = [1, 2, 3, 4];
 console.log(`The minimum is ${Math.min.apply(null, controleArr)} and the maximum is ${Math.max.apply(null,controleArr)}`)
 
 //trouve le min d'un array
@@ -28,4 +28,13 @@ console.log(min(controleArr)) //Contrôle
 
 //trouve le max d'un array
 let max= (arr) => Math.max.apply(null, arr);
-console.log(max(controleArr)) //Contrôle
+console.log(max(controleArr)) //Contrôle*/
+
+var json = '{"result":true, "count":[42, 53, 35]}';
+obj = JSON.parse(json);
+
+console.log(obj.count);
+// expected output: 42
+
+console.log(obj.result);
+// expected output: true
